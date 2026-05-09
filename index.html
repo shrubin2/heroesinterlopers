@@ -376,6 +376,18 @@
     .tracklist-section { padding: 60px 24px; }
     .footer-section { grid-template-columns: 1fr; padding: 40px 24px; }
   }
+  /* Fix image overflow on mobile */
+.col-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .col-body img {
+    height: auto !important;
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
@@ -481,7 +493,7 @@
   </div>
 </section>
 
-<section class="columns-section" id="about">
+<section class="columns-section">
   <div>
     <div class="col-header">Dan Galat</div>
     <div class="col-body">
@@ -499,7 +511,7 @@
   </div>
 </section>
 
-<section class="columns-section" id="about">
+<section class="columns-section">
   <div>
     <div class="col-header">Scott Rubin</div>
     <div class="col-body">
@@ -516,12 +528,12 @@
   </div>
 </section>
 
-<section class="columns-section" id="about">
+<section class="columns-section">
   <div>
     <div class="col-header">Kelly Quesada</div>
     <div class="col-body">
       <p><strong>Kelly Quesada</strong> is a cellist based on the south side of Chicago. Active as both an orchestral and chamber musician, Kelly can be seen playing a range of styles, from experimental and new music, to Baroque performance practice, to free improvisation. She is currently the other half of the duo Missing Piece with violinist Dan Galat who endeavor to commission new works and connect to their community, as well as the founding cellist of Tuuli Quartet who perform classic and new quartets throughout the Midwest. Previously, Kelly was principal cellist of the Civic Orchestra of Chicago, a founding member of the Delgani String Quartet, and toured as a member of the Portland Cello Project. She has performed throughout the US, appearing at The Green Mill, (le) poisson rouge, Marigny Opera House, the Portland Institute for Contemporary Art, and Constellation Chicago among many, many more. She has recorded multiple tracks as a session musician and is prominently featured in Invisible Light by the Delgani String Quartet and to e.s. by The Portland Cello Project. New releases are forthcoming, including many newly commissioned works and improvised music. Alongside friends April Hickey and Dan Galat, Kelly co-runs a community space in her neighborhood called Bridgeport Music Collective, offering rehearsal space, music education, performances, and music therapy.</p>
-</div>
+    </div>
   </div>
   <div>
     <div class="col-pic"></div>
@@ -532,7 +544,7 @@
   </div>
 </section>
 
-<section class="columns-section" id="about">
+<section class="columns-section">
   <div>
     <div class="col-header">Ben Willis</div>
     <div class="col-body">
@@ -549,29 +561,6 @@
   </div>
 </section>
 
-<!-- TRACKLIST -->
- <!--
-<section class="tracklist-section" id="tracks">
-  <div class="tracklist-header">
-    <h2 class="tracklist-title">Track Listing</h2>
-    <span class="tracklist-count">13 tracks</span>
-  </div>
-
-  <div class="track-row"><span class="track-num-r">01</span><span class="track-name-r">Pleasure, Politics (Take 2)</span><span class="track-suite"></span></div>
-  <div class="track-row"><span class="track-num-r">02</span><span class="track-name-r">Having</span><span class="track-suite"></span></div>
-  <div class="track-row"><span class="track-num-r">03</span><span class="track-name-r">String Quartet #1</span><span class="track-suite"></span></div>
-  <div class="track-row"><span class="track-num-r">04</span><span class="track-name-r">Building, Work</span><span class="track-suite"></span></div>
-  <div class="track-row"><span class="track-num-r">05</span><span class="track-name-r">Free with Bill <em style="font-size:0.85em;color:var(--smoke);font-style:italic;">(feat. Bill Harris)</em></span><span class="track-suite"></span></div>
-  <div class="track-row"><span class="track-num-r">06</span><span class="track-name-r">Keeping</span><span class="track-suite"></span></div>
-  <div class="track-row"><span class="track-num-r">07</span><span class="track-name-r">Pleasure, Politics</span><span class="track-suite"></span></div>
-  <div class="track-row"><span class="track-num-r">08</span><span class="track-name-r">String Quartet #1 (reprise)</span><span class="track-suite"></span></div>
-  <div class="track-row suite"><span class="track-num-r">09</span><span class="track-name-r">Prairie School — prairie school</span><span class="track-suite">Suite I</span></div>
-  <div class="track-row suite"><span class="track-num-r">10</span><span class="track-name-r">Prairie School — lake dance</span><span class="track-suite">Suite II</span></div>
-  <div class="track-row suite"><span class="track-num-r">11</span><span class="track-name-r">Prairie School — prairie fire</span><span class="track-suite">Suite III</span></div>
-  <div class="track-row suite"><span class="track-num-r">12</span><span class="track-name-r">Prairie School — firefly fields</span><span class="track-suite">Suite IV</span></div>
-  <div class="track-row suite"><span class="track-num-r">13</span><span class="track-name-r">Prairie School — coda</span><span class="track-suite">Suite V</span></div>
-</section>
--->
 
 <div class="bottom-strip"></div>
 
