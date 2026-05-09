@@ -388,13 +388,76 @@
     width: 100%;
   }
 }
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+  transition: all 0.3s ease;
+}
+
+/* Animate to X when open */
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .nav-hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(240,232,216,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(13,13,13,0.12);
+    padding: 8px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(13,13,13,0.06);
+    font-size: 0.72rem;
+  }
+}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-logo">heroes, interlopers</div>
-  <div class="nav-links">
+  <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
     <a href="#about">About</a>
     <a href="#scores">Scores</a>
     <a href="#collaborators">Collaborators</a>
@@ -602,6 +665,22 @@
     const idx = Math.floor(Math.random() * cells.length);
     cells[idx].style.background = colors[Math.floor(Math.random() * colors.length)];
   }, 300);
+
+  const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+navToggle.addEventListener('click', () => {
+  navToggle.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+
+// Close menu when a link is tapped
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navToggle.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
 </script>
 </body>
 </html>
