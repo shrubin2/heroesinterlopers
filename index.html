@@ -69,7 +69,7 @@
   .hero {
     min-height: 80vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     position: relative;
     border-bottom: 1px solid rgba(13,13,13,0.12);
     overflow: hidden;
@@ -201,7 +201,7 @@
   }
 
   .col-header {
-    font-size: 0.6rem;
+    font-size: 1rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--amber);
@@ -375,8 +375,7 @@
   <div class="nav-logo">heroes, interlopers</div>
   <div class="nav-links">
     <a href="#about">About</a>
-    <a href="#tracks">Tracks</a>
-    <a href="#">Listen</a>
+    <a href="#scores">Scores</a>
   </div>
 </nav>
 
@@ -387,40 +386,69 @@
       <div class="grid-layer" id="heroGrid"></div>
     </div>
     <!--<div class="edition-tag">New Album · 2026</div> --->
-    <h1 class="hero-title"><em>Gotta Do</em><br>Moore</h1>
+    <h1 class="hero-title"><em>Gotta Do</em><br>More</h1>
     <p class="hero-sub">the debut album from heroes, interlopers</p>
-    <p> Dan Galat - violin</p>
-    <p> Scott Rubin - viola</p>
-    <p> Kelly Quesada - cello</p>
-    <p> Ben Willis - contrabass</p>
+    <p> Dan Galat</p>
+    <p> Scott Rubin</p>
+    <p> Kelly Quesada</p>
+    <p> Ben Willis</p>
+      <iframe style="border: 0; width: 350px; height: 470px; padding-top: 20px;" src="https://bandcamp.com/EmbeddedPlayer/album=3760262808/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://scottrubin.bandcamp.com/album/dances-and-meditations">Dances and Meditations by Scott Rubin</a></iframe>
+
   </div>
+  
   <div class="hero-right">
     <img class="album-cover-img" src="img/front_cover.jpg" alt="Gotta Do More — Heroes, Interlopers album cover">
   </div>
 </section>
 
-<div class="rule" data-text="About the Record"></div>
+<!--<div class="rule" data-text="About the Record"></div>-->
 
 <!-- COLUMNS -->
 <section class="columns-section" id="about">
   <div>
     <div class="col-header">The Record</div>
     <div class="col-body">
-      <p><strong>Gotta Do More</strong> arrives like a field at the edge of a city — sprawling, wild, and shot through with color that doesn't apologize for itself.</p>
-      <p>Heroes, Interlopers built this album from fragments: torn photographs, typewritten lists, woven grids of blue tape and prairie grass. The textures of the cover are the textures of the music.</p>
-      <div class="pull-quote">"Built from collage and contradiction."</div>
-      <p>The record opens with politics and pleasure, threads a string quartet through its center, and closes with five movements of the Prairie School suite — lake dance, fire, fireflies, coda.</p>
+      <p><strong>Kelly Quesada, Dan Galat, Ben Willis, and Scott Rubin</strong> met through the improvised music scene in Chicago, and in particular, Josh Harlow’s monthly music series at Tangible Books in Bridgeport. Hearing each other’s sounds, and being united in the peculiarity of their instrumentation and approach to improvised music, they decided to record an album together under the name <strong>heroes, interlopers.</strong></p>
+      <p><strong>gotta do more</strong> is a collection of 3 graphic scores written by individuals in the band, free improvisations, and an improvisation with Bill Harris, who also engineered the album. To demonstrate the breadth of the graphic scores, each was recorded multiple times with varying interpretations.</p>
     </div>
   </div>
   <div>
-    <div class="col-header">Collaborators</div>
+    <div class="col-header">The Team</div>
     <div class="col-body">
-      <p><strong>Bill Harris</strong> appears on Track 5, "Free with Bill," lending the record one of its most open moments — a conversation rather than a performance.</p>
+      <p><strong>Dan Galat</strong> - violin</p>
+      <p><strong>Scott Rubin</strong> - viola</p>
+      <p><strong>Kelly Quesada</strong> - cello</p>
+      <p><strong>Ben Willis</strong> - contrabass</p>
+      <p><strong>Bill Harris</strong> - engineer and percussion on track X</p>
+      <p><strong>Alissa Voth</strong> - album art</p>
+      <p>In partnership with <strong>1473 Records</strong></p>
+      <p>Recorded at <strong>Marmalade Studios</strong> in <strong>Chicago</strong></p>
     </div>
   </div>
 </section>
 
+<!-- COLUMNS -->
+<section class="columns-section" id="scores">
+  <div>
+    <div class="col-header">The Scores</div>
+    <div class="col-body">
+      <p><strong>Pleasure/Politics</strong>, by <strong>Scott Rubin</strong>, is a performance of a graphic score created using clusters of numbers inside a series of boxes. Each number represents a musician, and their relative position/size in the box represents the relationship of that musician to the others. Before performing, musicians assign each band member a number and discuss how the positions and sizes of each number will manifest themselves musically.</p>
+      <br>
+      <img src="img/pleasure-and-politics.jpg" style="height: 500px;" alt="Pleasure/Politics score">
+      <br><br>
+      <p><strong>Prairie School</strong> by <strong>Dan Galat</strong>, is a way of interacting and living with our environment that takes into account our history and the history of land in which we reside and/or occupy. Prairie School is an homage to the friends who teach me and others how to explore the world through cultivation and sound. Prairie school imagines what the world was like and what the world could be like. Prairie School is a dedication to the former Urban Prairie Waldorf School and the incredible teachers, artists, parents and students who made a lovely community together on the southwestern shore of Lake Michigan (Michigami)i. May we all meet together again and sing.</p>
+      <br>
+      <img src="img/dan-galat-prairie-school-score.png" style="height: 500px;" alt="Prairie School score">
+      <br><br>
+      <p><strong>String Quartet #1</strong> by <strong>Ben Willis</strong>, is .</p>
+      <br>
+      <img src="img/ben-willis-sq1-score.png" style="height: 500px;" alt="String Quartet 1 score">
+    </div>
+
+</section>
+
 <!-- TRACKLIST -->
+ <!--
 <section class="tracklist-section" id="tracks">
   <div class="tracklist-header">
     <h2 class="tracklist-title">Track Listing</h2>
@@ -441,6 +469,7 @@
   <div class="track-row suite"><span class="track-num-r">12</span><span class="track-name-r">Prairie School — firefly fields</span><span class="track-suite">Suite IV</span></div>
   <div class="track-row suite"><span class="track-num-r">13</span><span class="track-name-r">Prairie School — coda</span><span class="track-suite">Suite V</span></div>
 </section>
+-->
 
 <div class="bottom-strip"></div>
 
