@@ -366,6 +366,140 @@
     margin-top: auto;
   }
 
+  .tour-section {
+    padding: 80px 48px;
+    background: var(--ink);
+    color: var(--paper);
+    border-bottom: 1px solid rgba(240,232,216,0.08);
+  }
+
+  .tour-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--paper);
+    margin-bottom: 0;
+  }
+
+  .tour-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--paper);
+  }
+
+  .tour-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(240,232,216,0.45);
+  }
+
+  .tour-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(240,232,216,0.08);
+    transition: all 0.2s;
+  }
+
+  .tour-row:hover {
+    padding-left: 10px;
+    border-bottom-color: rgba(184,112,8,0.5);
+    background: rgba(240,232,216,0.03);
+  }
+
+  .tour-date {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--amber);
+    white-space: nowrap;
+  }
+
+  .tour-date strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: var(--paper);
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+
+  .tour-venue {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--paper);
+  }
+
+  .tour-venue span {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    font-style: normal;
+    color: rgba(240,232,216,0.5);
+    margin-top: 3px;
+    letter-spacing: 0.06em;
+  }
+
+  .tour-location {
+    font-size: 0.8rem;
+    color: rgba(240,232,216,0.6);
+    letter-spacing: 0.05em;
+  }
+
+  .tour-location strong {
+    display: block;
+    color: var(--paper);
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+  }
+
+  .tour-ticket-btn {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 9px 18px;
+    border: 1px solid var(--amber);
+    color: var(--amber);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+
+  .tour-ticket-btn:hover {
+    background: var(--amber);
+    color: var(--ink);
+  }
+
+  .tour-ticket-btn.sold-out {
+    border-color: rgba(240,232,216,0.2);
+    color: rgba(240,232,216,0.25);
+    pointer-events: none;
+  }
+
+  .tour-row.past {
+    opacity: 0.4;
+  }
+
+  .tour-row.past .tour-ticket-btn {
+    display: none;
+  }
+
+  .past-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(240,232,216,0.25);
+  }
+
   /* === RESPONSIVE === */
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
@@ -459,6 +593,7 @@
   </button>
   <div class="nav-links" id="navLinks">
     <a href="#about">About</a>
+    <a href="#tour">Tour Dates</a>
     <a href="#scores">Scores</a>
     <a href="#collaborators">Collaborators</a>
   </div>
@@ -502,7 +637,77 @@
       <iframe src="https://www.youtube.com/embed/iWU8VMLN5wI?si=X64TWaiUt-o9Mk6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="aspect-ratio: 16/9; width: 100% !important"></iframe>    </div>
   </div>
 </section>
+<!-- TOUR -->
+<section class="tour-section" id="tour">
+  <div class="tour-header">
+    <h2 class="tour-title">On Tour - TBA</h2>
+    <span class="tour-subtitle">Gotta Do More Tour · Fall 2026</span>
+  </div>
+<!--
+  <div class="tour-row past">
+    <div class="tour-date"><strong>Oct 14</strong>2025</div>
+    <div class="tour-venue">Schubas Tavern<span>Doors 7pm · Show 8pm</span></div>
+    <div class="tour-location"><strong>Chicago, IL</strong>Lakeview</div>
+    <span class="past-label">Past</span>
+  </div>
 
+  <div class="tour-row past">
+    <div class="tour-date"><strong>Oct 17</strong>2025</div>
+    <div class="tour-venue">The Empty Bottle<span>Doors 8pm · Show 9pm</span></div>
+    <div class="tour-location"><strong>Chicago, IL</strong>Ukrainian Village</div>
+    <span class="past-label">Past</span>
+  </div>
+
+  <div class="tour-row">
+    <div class="tour-date"><strong>Nov 08</strong>2025</div>
+    <div class="tour-venue">7th Street Entry<span>Doors 7pm · Show 8pm</span></div>
+    <div class="tour-location"><strong>Minneapolis, MN</strong>First Avenue complex</div>
+    <a href="#" class="tour-ticket-btn">Tickets</a>
+  </div>
+
+  <div class="tour-row">
+    <div class="tour-date"><strong>Nov 12</strong>2025</div>
+    <div class="tour-venue">Turf Club<span>Doors 7:30pm · Show 8:30pm</span></div>
+    <div class="tour-location"><strong>St. Paul, MN</strong>Hamline-Midway</div>
+    <a href="#" class="tour-ticket-btn sold-out">Sold Out</a>
+  </div>
+
+  <div class="tour-row">
+    <div class="tour-date"><strong>Nov 21</strong>2025</div>
+    <div class="tour-venue">Beachland Ballroom<span>Doors 7pm · Show 8pm</span></div>
+    <div class="tour-location"><strong>Cleveland, OH</strong>Collinwood</div>
+    <a href="#" class="tour-ticket-btn">Tickets</a>
+  </div>
+
+  <div class="tour-row">
+    <div class="tour-date"><strong>Dec 05</strong>2025</div>
+    <div class="tour-venue">The Ark<span>Doors 7pm · Show 8pm</span></div>
+    <div class="tour-location"><strong>Ann Arbor, MI</strong></div>
+    <a href="#" class="tour-ticket-btn">Tickets</a>
+  </div>
+
+  <div class="tour-row">
+    <div class="tour-date"><strong>Jan 16</strong>2026</div>
+    <div class="tour-venue">Thalia Hall<span>Doors 7:30pm · Show 8:30pm</span></div>
+    <div class="tour-location"><strong>Chicago, IL</strong>Pilsen</div>
+    <a href="#" class="tour-ticket-btn">Tickets</a>
+  </div>
+
+  <div class="tour-row">
+    <div class="tour-date"><strong>Feb 07</strong>2026</div>
+    <div class="tour-venue">Blind Bob's<span>Doors 8pm · Show 9pm</span></div>
+    <div class="tour-location"><strong>Dayton, OH</strong>Oregon District</div>
+    <a href="#" class="tour-ticket-btn">Tickets</a>
+  </div>
+
+  <div class="tour-row">
+    <div class="tour-date"><strong>Mar 14</strong>2026</div>
+    <div class="tour-venue">High Noon Saloon<span>Doors 7pm · Show 8pm</span></div>
+    <div class="tour-location"><strong>Madison, WI</strong></div>
+    <a href="#" class="tour-ticket-btn">Tickets</a>
+  </div>
+  -->
+</section>
 <!-- COLUMNS -->
 <section class="columns-section" id="scores">
   <div>
@@ -520,16 +725,16 @@
   </div>
 
   <div>
-    <div class="col-header">Tracks 9-13: Prairie School</div>
+    <div class="col-header">Tracks 2 & 6: Having, Keeping</div>
     <div class="col-body">
-      <h3>Prairie School - Dan Galat</h3>
-      <p>Prairie School is a way of interacting and living with our environment that takes into account our history and the history of land in which we reside and/or occupy. Prairie School is an homage to the friends who teach me and others how to explore the world through cultivation and sound. Prairie school imagines what the world was like and what the world could be like. Prairie School is a dedication to the former Urban Prairie Waldorf School and the incredible teachers, artists, parents and students who made a lovely community together on the southwestern shore of Lake Michigan (Michigami). May we all meet together again and sing.</p>
+      <h3>Having, Keeping - Ben Willis</h3>
+      <p>Some improvisers might look at this and say “okay let’s just dive into playing,” and some might prefer to discuss and formulate a shared plan for interpretation. Learning each others’ impulses and preferences is an important part of collaboration. In the case of this recording, we each selected a word and improvised along the path presented on the opposite spectrum. Sometimes we informed each other what path we would follow, and sometimes not. In collectively creating a shared experience while listening for how each other might choose to sonically depict a transition from “having secrets” to “keeping secrets,” “implicit” to “explicit,” we are producing an infinite amount of unique socio-sonic information. Which is kind of intense! Don’t tell anyone!</p>
     </div>
   </div>
   <div>
     <div class="col-pic"></div>
     <div class="col-body">
-      <img src="img/dan-galat-prairie-school-score.png" style="height: 500px;" alt="Prairie School score"><br>
+      <img src="img/having-keeping.png" style="height: 500px;" alt="String Quartet 1 score">
     </div>
   </div>
 
@@ -548,16 +753,16 @@
   </div>
 
   <div>
-    <div class="col-header">Tracks 2 & 6: Having, Keeping</div>
+    <div class="col-header">Tracks 9-13: Prairie School</div>
     <div class="col-body">
-      <h3>Having, Keeping - Ben Willis</h3>
-      <p>Some improvisers might look at this and say “okay let’s just dive into playing,” and some might prefer to discuss and formulate a shared plan for interpretation. Learning each others’ impulses and preferences is an important part of collaboration. In the case of this recording, we each selected a word and improvised along the path presented on the opposite spectrum. Sometimes we informed each other what path we would follow, and sometimes not. In collectively creating a shared experience while listening for how each other might choose to sonically depict a transition from “having secrets” to “keeping secrets,” “implicit” to “explicit,” we are producing an infinite amount of unique socio-sonic information. Which is kind of intense! Don’t tell anyone!</p>
+      <h3>Prairie School - Dan Galat</h3>
+      <p>Prairie School is a way of interacting and living with our environment that takes into account our history and the history of land in which we reside and/or occupy. Prairie School is an homage to the friends who teach me and others how to explore the world through cultivation and sound. Prairie school imagines what the world was like and what the world could be like. Prairie School is a dedication to the former Urban Prairie Waldorf School and the incredible teachers, artists, parents and students who made a lovely community together on the southwestern shore of Lake Michigan (Michigami). May we all meet together again and sing.</p>
     </div>
   </div>
   <div>
     <div class="col-pic"></div>
     <div class="col-body">
-      <img src="img/having-keeping.png" style="height: 500px;" alt="String Quartet 1 score">
+      <img src="img/dan-galat-prairie-school-score.png" style="height: 500px;" alt="Prairie School score"><br>
     </div>
   </div>
 </section>
