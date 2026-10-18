@@ -500,6 +500,47 @@
     color: rgba(240,232,216,0.25);
   }
 
+  /* === TOUR RESPONSIVE === */
+  @media (max-width: 900px) {
+    .tour-section { padding: 60px 24px; }
+  }
+
+  @media (max-width: 600px) {
+    .tour-section { padding: 48px 20px; }
+
+    .tour-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .tour-title { font-size: 2rem; }
+
+    .tour-row {
+      grid-template-columns: 76px 1fr;
+      grid-template-areas:
+        "date venue"
+        "date location"
+        ".    action";
+      column-gap: 18px;
+      row-gap: 4px;
+      padding: 18px 0;
+      align-items: start;
+    }
+
+    .tour-row:hover { padding-left: 0; }
+
+    .tour-date { grid-area: date; }
+    .tour-venue { grid-area: venue; font-size: 1.05rem; line-height: 1.25; }
+    .tour-location { grid-area: location; font-size: 0.75rem; }
+    .tour-location strong { font-size: 0.85rem; margin-bottom: 0; }
+    .tour-ticket-btn,
+    .past-label {
+      grid-area: action;
+      justify-self: start;
+      margin-top: 10px;
+    }
+  }
   /* === RESPONSIVE === */
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
