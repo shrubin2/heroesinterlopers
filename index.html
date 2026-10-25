@@ -597,6 +597,16 @@
 @media (max-width: 900px) {
   .nav-hamburger { display: flex; }
 
+  /* Solid nav + menu on mobile; no backdrop-filter (it breaks stacking on phones) */
+  nav {
+    background: #F0E8D8;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    z-index: 1000;
+    transform: translateZ(0);
+    position: sticky;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -605,9 +615,9 @@
     right: 0;
     flex-direction: column;
     gap: 0;
-    background: rgba(240,232,216,0.97);
-    backdrop-filter: blur(8px);
+    background: #F0E8D8;
     border-bottom: 1px solid rgba(13,13,13,0.12);
+    box-shadow: 0 12px 24px rgba(13,13,13,0.15);
     padding: 8px 0;
   }
 
